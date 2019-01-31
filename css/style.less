@@ -1,0 +1,907 @@
+@white: rgb(251,255,255);
+@blue: #004280;
+
+/**fonts**/
+@font-face {
+	font-family:"Neris Black";
+	src:url("../fonts/neris-black.ttf");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+	font-family:"Neris Thin";
+	src:url("../fonts/neris-thin.ttf");
+	font-weight:normal;
+	font-style:normal;
+}
+/**styles**/
+*{
+	margin: 0;
+	padding: 0;
+	transition: 1s;
+}
+
+body{
+	background-color: rgb(0,0,0);
+	color: @white;
+	font-family:"Neris Thin";
+	font-size: 12px;
+	line-height: 12px;
+	.bolder{
+		font-family:"Neris Black";	
+	}
+	a{
+		color: @white;
+	}
+	table{
+		display:inline-block;
+		td{
+			vertical-align: top;
+		}
+	}
+	ul{
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.wrapper{
+	max-width: 1920px;
+	margin: 0 auto;	
+	.social{
+		padding-top: 20px;
+		img{
+			margin-right: 10px;
+		}
+	}
+	.title{
+		font-size:66px;
+		line-height:66px;
+		text-transform: uppercase;
+		letter-spacing:12px;
+		img{
+			margin-top:-100px;
+			margin-right:-100px;
+		}
+	}
+	.subtitle{
+		font-size:36px;
+		line-height:36px;
+		letter-spacing:7px;
+		font-family: Neris Black;
+	}
+	.description{
+		margin-top: 25px; 
+		font-size: 20px;
+		line-height:30px;	
+		.phone{
+			text-align:left;
+		}
+	}
+	.button-block{
+		margin-top: 30px;
+		.button{
+			display:inline-block;
+			background-image:url(../img/bg/btn-bg.png);
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-color:transparent;
+			border: none;
+			height: 32px;
+			width: 194px;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing:1px;
+			margin-right: 20px;
+			padding:8px;
+			text-decoration:none;
+			text-align: center;
+			color: @white;
+			line-height: 13px;
+		}
+		a{
+			color: @blue;
+			text-transform: uppercase;
+			letter-spacing:1px;
+			text-decoration: underline;
+		}
+	}
+	.logo{
+		font-size: 24px;
+		line-height: 24px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		.blue{
+			color: @blue;
+		}
+	}
+	table, .phone-bottom{
+		text-align:right;
+		.text-left{
+			a{
+				text-decoration:underline;
+				line-height:20px
+			}
+		}
+	}
+	.phone{
+		margin-top:4px;
+		text-align: right;
+		font-size:24px;
+		line-height: 24px;
+		letter-spacing:3px;
+	}
+}
+.home{
+	background-image: url(../img/bg/home-bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding:40px 90px 0 90px;
+	.title{
+		margin-top:170px;
+	}
+	nav{
+		ul{
+			max-width:680px;
+			display: flex;
+			justify-content: space-between;
+			li{
+				list-style: none;
+				a{
+					color: @white;
+					font-family: Neris Black;
+					text-transform: uppercase;
+					font-size: 12px;
+					line-height: 30px;
+				}
+			}	
+		}
+	}
+	.iphone{
+		width: 100%;
+		margin-top: 80px;
+	}	
+	.descr-list{
+		margin-top:30px;
+		li{
+			list-style-image: url(../img/icons/tick.png);
+			line-height:30px;
+			padding:5px 0;
+			font-size:20px;
+			letter-spacing:3px;
+			font-family: Neris Black;
+		}
+	}
+}
+.about{
+	background-image: url(../img/bg/about-bg.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding:25px 90px 0 90px;
+	.title:first-child{
+		margin-top:50px
+	}
+	.iphone{
+		width: 100%;
+	}
+	.advantages{
+		margin-top:50px;
+		margin-bottom:70px;
+	}
+	.advant-item{
+		display: inline-block;
+		width:49%;
+		margin-top:40px;
+		font-size:20px;
+		letter-spacing:3px;
+		font-family: Neris Black;
+		line-height:22px;
+		.image{
+			display:flex;
+			justify-content:flex-start;
+			align-items:center;
+			img{
+				margin-right:20px;
+			}
+		}
+	}
+}
+.price{
+	*{
+		transition: none;
+	}
+	padding:75px 90px 0 90px;
+	.subtitle{
+		margin-top: 50px;
+	}
+	.phone-slider{
+		margin: 0 auto;	
+		padding-top:100px;
+		padding-bottom:150px;
+		.slide{
+			display:inline-block;
+			width:190px;
+			border-radius: 3px;
+			padding-top:15px;
+			padding-bottom: 30px;
+			text-decoration:none;
+			transition: all .2s linear;
+			img{
+				margin-top:105px;
+				width:100%;
+				margin:0;
+				padding: 0;	
+			}
+			.text{
+				padding-top:45px;
+				text-align: center;
+				font-size:20px;
+				letter-spacing:3px;
+				font-family: Neris Black;
+				margin: 0;	
+			}
+		}
+		.slide:hover, .slide:focus, .active{
+			background-color: #e9e9e9;
+			color: #1f1f1f;
+		}
+	}
+	.slide-prev, .slide-next {
+		position: absolute;
+		top:38%;
+		color: @white;
+		opacity: .5;
+		font-size: 60px;
+		padding: 10px;
+		z-index: 99;
+	}
+	.slide-prev:hover, .slide-next:hover {
+		color: @white;
+		opacity: .9;
+	}
+	.slide-prev {
+		left: -40px;
+	}
+	.slide-next {
+		right: -40px;
+	}
+	.slick-dots{
+		list-style:none;
+		padding-top: 20px;
+		margin:0 auto;
+		text-align: center;
+		li{
+			display:inline-block;
+			margin:10px;
+			width:10px;
+			border-radius:50%;
+			height:10px;
+			background-color: @white;
+			cursor: pointer;
+			opacity:0.4;
+			button{
+				display:none;
+			}
+		}
+		.slick-active{
+			opacity:1;
+		}
+	}
+	.service{
+		margin-top:50px;
+		text-align:center;
+		margin-bottom: 20px;
+		a{
+			display:inline-block;			
+			letter-spacing:3px;
+			font-family: Neris Black;
+			line-height:20px;
+			font-size:20px;
+			opacity:0.4;
+			padding: 20px;
+			cursor:pointer;
+			text-decoration:none;
+			transition: all .2s linear;
+		}
+		.service-item:hover,.service-item:focus,.active-service{
+			opacity:1;
+			color: #fff;
+		}
+	}
+}
+.result{
+	padding:200px 90px 0 90px;	
+	.left{
+		.result-service{
+			margin-top:50px;
+			letter-spacing:3px;
+			font-family: Neris Black;
+			line-height:22px;
+			font-size:22px;
+		}
+		.result-phone{
+			line-height:22px;
+			font-size:22px;
+			letter-spacing:3px;
+			display:flex;
+			align-items: center;
+			.fa-angle-up{
+				font-size:45px;
+				padding-left: 10px;
+			}
+		}
+		.result-phone a:hover, .result-phone a:focus{
+			color: #fff;
+		}
+		.result-price{
+			font-size:250px;
+			line-height:220px;
+		}
+		.rub{
+			display:inline-block;
+			vertical-align:top;
+			padding-top:40px;
+			letter-spacing:3px;
+			font-family: Neris Black;
+			line-height:14px;
+			font-size:14px;
+		}
+		.discount{
+			padding-top:20px;
+			letter-spacing:3px;
+			line-height:22px;
+			font-size:22px;
+		}
+
+	}
+	.right{
+		.title{
+			font-size:48px;
+			line-height:48px;
+			letter-spacing:10px;
+		}
+		.subtitle{
+			margin-top:100px;
+			font-size:36px;
+			line-height:30px;
+			div{
+				font-family:Neris Thin;
+			}
+		}
+		form{
+			max-width:420px;
+			padding-top:55px;
+			height:190px;
+			font-size: 18px;
+			line-height:20px;
+			input{
+				width:100%;
+				background-color:transparent;
+				background-image: url(../img/bg/input-bg.png);
+				border:none;
+				height:30px;
+				font-size: 14px;
+				font-family: Neris Black;
+				letter-spacing:2px;
+				padding:5px;
+				margin-top:8px;
+			}
+			input::-moz-placeholder,input::-webkit-input-placeholder{ 
+				opacity: 0.3;	 
+			}
+		}
+	}
+}
+#post_form_success{
+	font-size:20px;
+	max-width:420px;
+}
+footer{
+	padding-top:150px;
+	padding-bottom: 80px;
+}
+#modalPrice{
+	.modal-dialog{
+		width:100%;
+		margin: 0;
+		padding: 0;
+	}
+	.modal-content{
+		background-color:#fff;
+		max-width:100%;
+		width:100%;
+		margin: 20px;
+		padding:20px;
+	}
+}
+/**responsive**/
+
+@media screen and (max-width: 1620px) {
+	.wrapper{
+		.title{
+			font-size:46px;
+			line-height:46px;
+			letter-spacing:9px;
+			img{
+				width:28px;
+				margin-top:-75px;
+			}
+		}
+		.description{
+			margin-top: 20px;
+			font-size: 16px;
+			line-height:18px;
+		}
+		.phone{
+			font-size:20px;
+			line-height:20px;
+		}
+		.subtitle{
+			font-size:26px;
+			line-height:26px;
+			letter-spacing:5px;
+		}
+		.logo{
+			font-size: 20px;
+			line-height:20px;
+		}
+	}
+	.home {
+		.descr-list {
+			li{
+				font-size:16px;
+				padding: 0;
+			}
+		}
+		.title {
+			margin-top: 140px;
+		}
+		nav ul li a{
+			font-size:10px;
+			line-height:20px;
+		}
+	}
+	.about {
+		.title{
+			letter-spacing:6px;
+			font-size:40px;
+			line-height:40px;
+		}
+		.advantages{
+			margin-top:35px;
+			margin-bottom: 45px;
+		}
+		.advant-item{ 
+			margin-top: 20px;
+			.image{
+				font-size: 16px;
+				line-height:18px;
+				letter-spacing: 2px;
+				img{
+					width:40px;
+				}
+			}
+		}
+	}
+	.price {
+		.phone-slider {
+			padding-top:60px;
+			padding-bottom: 100px;
+			.slide .text{
+				font-size:16px;
+				line-height:16px;
+			}
+		}
+		.service {
+			a{
+				letter-spacing: 2px;
+				line-height: 16px;
+				font-size: 16px;
+				padding: 10px 15px;
+			}
+		}
+	}
+	.result {
+		.left {
+			.result-service{
+				margin-top: 40px;
+				line-height: 18px;
+				font-size:18px;
+			}
+			.result-phone{
+				font-size:18px;
+				letter-spacing:3px;
+				line-height:18px;
+			}
+			.result-price{
+				font-size: 200px;
+				line-height:180px;
+			}
+			.rub{
+				font-size:12px;
+				line-height:12px;
+				padding-top:30px;
+			}
+			.discount{
+				font-size: 14px;
+				line-height:14px;
+			}
+		}
+		.right{
+			.title{
+				font-size:36px;
+				line-height:36px;
+				letter-spacing:8px;
+			}
+			.subtitle{
+				margin-top:55px;
+				font-size:26px;
+				line-height:26px;
+				letter-spacing:4px;
+			}
+			form{
+				padding-top:40px;
+				max-width:320px;
+				input{
+					font-size:12px;
+				}
+			}
+		}
+	}
+	footer{
+		padding-top:80px;
+		padding-bottom: 40px;
+	}
+}
+@media screen and (max-width: 1230px) {
+	.wrapper{
+		.title{
+			font-size:36px;
+			line-height:36px;
+			letter-spacing:6px;
+			img{
+				width:25px;
+				margin-top:-65px;
+			}
+		}
+		.description{
+			margin-top: 15px;
+			font-size: 14px;
+			line-height:16px;
+		}
+		.phone{
+			font-size:16px;
+			line-height:18px;
+		}
+		.subtitle{
+			font-size:22px;
+			line-height:22px;
+			letter-spacing:3px;
+		}
+		.logo{
+			font-size: 18px;
+			line-height:18px;
+		}
+	}
+	.home {
+		.descr-list {
+			li{
+				font-size:14px;
+				line-height:16px;
+			}
+		}
+		.title {
+			margin-top: 120px;
+		}
+	}
+	.about {
+		.title{
+			letter-spacing:5px;
+			font-size:30px;
+			line-height:30px;
+		}
+		.advantages{
+			margin-top:20px;
+			margin-bottom: 30px;
+		}
+		.advant-item{ 
+			margin-top: 15px;
+			.image{
+				font-size: 14px;
+				line-height:16px;
+				letter-spacing: 1px;
+				img{
+					width:35px;
+				}
+			}
+		}
+	}
+	.price {
+		.phone-slider {
+			padding-top:40px;
+			padding-bottom: 80px;
+			.slide .text{
+				font-size:14px;
+				line-height:14px;
+			}
+		}
+		.service {
+			a{
+				letter-spacing: 2px;
+				line-height: 14px;
+				font-size: 14px;
+				padding: 8px 13px;
+			}
+		}
+	}
+	.result {
+		.left {
+			.result-service{
+				margin-top: 30px;
+				line-height: 16px;
+				font-size:16px;
+			}
+			.result-phone{
+				font-size:16px;
+				letter-spacing:2px;
+				line-height:16px;
+			}
+			.result-price{
+				font-size: 156px;
+				line-height:156px;
+			}
+			.rub{
+				font-size:10px;
+				line-height:10px;
+				padding-top:22px;
+			}
+			.discount{
+				font-size: 12px;
+				line-height:12px;
+			}
+		}
+		.right{
+			.title{
+				font-size:28px;
+				line-height:28px;
+				letter-spacing:6px;
+			}
+			.subtitle{
+				margin-top:35px;
+				font-size:22px;
+				line-height:22px;
+				letter-spacing:3px;
+			}
+			form{
+				padding-top:30px;
+				max-width:300px;
+				input{
+					font-size:10px;
+				}
+			}
+		}
+	}
+	footer{
+		padding-top:70px;
+		padding-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.wrapper{
+		.title{
+			font-size:28px;
+			line-height:28px;
+			letter-spacing:3px;
+			img{
+				width:20px;
+				margin-top:-50px;
+			}
+		}
+		.subtitle{
+			font-size:20px;
+			line-height:20px;
+			letter-spacing:2px;
+		}
+		.button-block{
+			margin-top:20px;
+			.button{
+				font-size:12px;
+				max-width: 150px;
+			}
+		}
+		.description{
+			font-size:12px;
+			line-height:14px;
+		}
+	}
+	.home {
+		padding-left:40px;
+		padding-right:40px;
+		.descr-list {
+			li{
+				font-size:14px;
+				line-height:16px;
+			}
+		}
+		.title {
+			margin-top: 40px;
+		}
+		.descr-list{
+			margin-top:10px;
+		}
+	}
+	.about {
+		padding-left:40px;
+		padding-right:40px;
+		.title{
+			letter-spacing:3px;
+			font-size:22px;
+			line-height:22px;
+		}
+		.title:first-child{
+			margin-top:10px;
+		}
+		.advantages{
+			margin-top:10px;
+			margin-bottom: 15px;
+		}
+		.advant-item{ 
+			margin-top: 10px;
+			.image{
+				font-size: 12px;
+				line-height:12px;
+				letter-spacing: 1px;
+				img{
+					width:25px;
+				}
+			}
+		}
+	}
+	.price {
+		padding-top:50px;
+		padding-left:40px;
+		padding-right:40px;
+		.phone-slider {
+			padding-top:20px;
+			padding-bottom: 10px;
+		}
+		.service {
+			a{
+				padding: 6px 13px;
+			}
+		}
+		.subtitle{
+			margin-top:20px;
+		}
+	}
+	.result {
+		padding: 50px 40px 0 40px;
+		.left {
+			.result-service{
+				margin-top: 20px;
+				line-height: 14px;
+				font-size:14px;
+			}
+			.result-phone{
+				font-size:14px;
+				letter-spacing:2px;
+				line-height:14px;
+			}
+			.result-price{
+				font-size: 126px;
+				line-height:126px;
+			}
+			.rub{
+				font-size:10px;
+				line-height:10px;
+				padding-top:20px;
+			}
+			.discount{
+				font-size: 12px;
+				line-height:12px;
+			}
+		}
+		.right{
+			.title{
+				font-size:22px;
+				line-height:22px;
+				letter-spacing:3px;
+			}
+			.subtitle{
+				margin-top:20px;
+				font-size:18px;
+				line-height:18px;
+				letter-spacing:2px;
+			}
+			form{
+				padding-top:20px;
+				max-width:300px;
+				input{
+					font-size:10px;
+				}
+			}
+		}
+	}
+	footer{
+		padding-top:60px;
+		padding-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.wrapper{
+		.title{
+			font-size:22x;
+			line-height:282x;
+			letter-spacing:2px;
+			img{
+				width:15px;
+				margin-top:-40px;
+				margin-right: -20px;
+			}
+		}
+		.logo{
+			text-align:center;
+		}
+		.phone-number{
+			padding-top:10px;
+			text-align:center;
+		}
+	}
+	.home {
+		padding-left:30px;
+		padding-right:30px;
+		background:transparent;
+	}	
+	.about {
+		padding-top:40px;
+		padding-left:30px;
+		padding-right:30px;
+		
+		.advant-item{ 
+			.image{
+				img{
+					margin-right:8px;
+				}
+			}
+		}
+	}
+	.price {
+		padding-left:30px;
+		padding-right:30px;
+		.service {
+			margin-top:20px;
+		}
+	}
+	.result {
+		padding: 40px 30px 0 30px;
+		.left {
+			padding-bottom:40px;
+			text-align:center;
+			.result-phone{
+				justify-content: center;
+			}
+		}
+		.right{
+			text-align:center;
+			.title{
+				font-size:20px;
+				line-height:20px;
+				letter-spacing:2px;
+			}
+			.subtitle{
+				font-size:16px;
+				line-height:16px;
+				letter-spacing:2px;
+			}
+			form{
+				margin: 0 auto;
+			}
+		}
+	}
+	footer{
+	}
+}

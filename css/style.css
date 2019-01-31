@@ -1,0 +1,843 @@
+/**fonts**/
+@font-face {
+  font-family: "Neris Black";
+  src: url("../fonts/neris-black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neris Thin";
+  src: url("../fonts/neris-thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+/**styles**/
+* {
+  margin: 0;
+  padding: 0;
+  transition: 1s;
+}
+body {
+  background-color: #000000;
+  color: #fbffff;
+  font-family: "Neris Thin";
+  font-size: 12px;
+  line-height: 12px;
+}
+body .bolder {
+  font-family: "Neris Black";
+}
+body a {
+  color: #fbffff;
+}
+body table {
+  display: inline-block;
+}
+body table td {
+  vertical-align: top;
+}
+body ul {
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.wrapper .social {
+  padding-top: 20px;
+}
+.wrapper .social img {
+  margin-right: 10px;
+}
+.wrapper .title {
+  font-size: 66px;
+  line-height: 66px;
+  text-transform: uppercase;
+  letter-spacing: 12px;
+}
+.wrapper .title img {
+  margin-top: -100px;
+  margin-right: -100px;
+}
+.wrapper .subtitle {
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 7px;
+  font-family: Neris Black;
+}
+.wrapper .description {
+  margin-top: 25px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.wrapper .description .phone {
+  text-align: left;
+}
+.wrapper .button-block {
+  margin-top: 30px;
+}
+.wrapper .button-block .button {
+  display: inline-block;
+  background-image: url(../img/bg/btn-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+  height: 32px;
+  width: 194px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 20px;
+  padding: 8px;
+  text-decoration: none;
+  text-align: center;
+  color: #fbffff;
+  line-height: 13px;
+}
+.wrapper .button-block a {
+  color: #004280;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+.wrapper .logo {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.wrapper .logo .blue {
+  color: #004280;
+}
+.wrapper table,
+.wrapper .phone-bottom {
+  text-align: right;
+}
+.wrapper table .text-left a,
+.wrapper .phone-bottom .text-left a {
+  text-decoration: underline;
+  line-height: 20px;
+}
+.wrapper .phone {
+  margin-top: 4px;
+  text-align: right;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 3px;
+}
+.home {
+  background-image: url(../img/bg/home-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 90px 0 90px;
+}
+.home .title {
+  margin-top: 170px;
+}
+.home nav ul {
+  max-width: 680px;
+  display: flex;
+  justify-content: space-between;
+}
+.home nav ul li {
+  list-style: none;
+}
+.home nav ul li a {
+  color: #fbffff;
+  font-family: Neris Black;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 30px;
+}
+.home .iphone {
+  width: 100%;
+  margin-top: 80px;
+}
+.home .descr-list {
+  margin-top: 30px;
+}
+.home .descr-list li {
+  list-style-image: url(../img/icons/tick.png);
+  line-height: 30px;
+  padding: 5px 0;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+}
+.about {
+  background-image: url(../img/bg/about-bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 25px 90px 0 90px;
+}
+.about .title:first-child {
+  margin-top: 50px;
+}
+.about .iphone {
+  width: 100%;
+}
+.about .advantages {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+.about .advant-item {
+  display: inline-block;
+  width: 49%;
+  margin-top: 40px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+  line-height: 22px;
+}
+.about .advant-item .image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about .advant-item .image img {
+  margin-right: 20px;
+}
+.price {
+  padding: 75px 90px 0 90px;
+}
+.price * {
+  transition: none;
+}
+.price .subtitle {
+  margin-top: 50px;
+}
+.price .phone-slider {
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.price .phone-slider .slide {
+  display: inline-block;
+  width: 190px;
+  border-radius: 3px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+.price .phone-slider .slide img {
+  margin-top: 105px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.price .phone-slider .slide .text {
+  padding-top: 45px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+  margin: 0;
+}
+.price .phone-slider .slide:hover,
+.price .phone-slider .slide:focus,
+.price .phone-slider .active {
+  background-color: #e9e9e9;
+  color: #1f1f1f;
+}
+.price .slide-prev,
+.price .slide-next {
+  position: absolute;
+  top: 38%;
+  color: #fbffff;
+  opacity: .5;
+  font-size: 60px;
+  padding: 10px;
+  z-index: 99;
+}
+.price .slide-prev:hover,
+.price .slide-next:hover {
+  color: #fbffff;
+  opacity: .9;
+}
+.price .slide-prev {
+  left: -40px;
+}
+.price .slide-next {
+  right: -40px;
+}
+.price .slick-dots {
+  list-style: none;
+  padding-top: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.price .slick-dots li {
+  display: inline-block;
+  margin: 10px;
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  background-color: #fbffff;
+  cursor: pointer;
+  opacity: 0.4;
+}
+.price .slick-dots li button {
+  display: none;
+}
+.price .slick-dots .slick-active {
+  opacity: 1;
+}
+.price .service {
+  margin-top: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.price .service a {
+  display: inline-block;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+  line-height: 20px;
+  font-size: 20px;
+  opacity: 0.4;
+  padding: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+.price .service .service-item:hover,
+.price .service .service-item:focus,
+.price .service .active-service {
+  opacity: 1;
+  color: #fff;
+}
+.result {
+  padding: 200px 90px 0 90px;
+}
+.result .left .result-service {
+  margin-top: 50px;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+  line-height: 22px;
+  font-size: 22px;
+}
+.result .left .result-phone {
+  line-height: 22px;
+  font-size: 22px;
+  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+}
+.result .left .result-phone .fa-angle-up {
+  font-size: 45px;
+  padding-left: 10px;
+}
+.result .left .result-phone a:hover,
+.result .left .result-phone a:focus {
+  color: #fff;
+}
+.result .left .result-price {
+  font-size: 250px;
+  line-height: 220px;
+}
+.result .left .rub {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 40px;
+  letter-spacing: 3px;
+  font-family: Neris Black;
+  line-height: 14px;
+  font-size: 14px;
+}
+.result .left .discount {
+  padding-top: 20px;
+  letter-spacing: 3px;
+  line-height: 22px;
+  font-size: 22px;
+}
+.result .right .title {
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 10px;
+}
+.result .right .subtitle {
+  margin-top: 100px;
+  font-size: 36px;
+  line-height: 30px;
+}
+.result .right .subtitle div {
+  font-family: Neris Thin;
+}
+.result .right form {
+  max-width: 420px;
+  padding-top: 55px;
+  height: 190px;
+  font-size: 18px;
+  line-height: 20px;
+}
+.result .right form input {
+  width: 100%;
+  background-color: transparent;
+  background-image: url(../img/bg/input-bg.png);
+  border: none;
+  height: 30px;
+  font-size: 14px;
+  font-family: Neris Black;
+  letter-spacing: 2px;
+  padding: 5px;
+  margin-top: 8px;
+}
+.result .right form input::-moz-placeholder,
+.result .right form input::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+#post_form_success {
+  font-size: 20px;
+  max-width: 420px;
+}
+footer {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+#modalPrice .modal-dialog {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#modalPrice .modal-content {
+  background-color: #fff;
+  max-width: 100%;
+  width: 100%;
+  margin: 20px;
+  padding: 20px;
+}
+/**responsive**/
+@media screen and (max-width: 1620px) {
+  .wrapper .title {
+    font-size: 46px;
+    line-height: 46px;
+    letter-spacing: 9px;
+  }
+  .wrapper .title img {
+    width: 28px;
+    margin-top: -75px;
+  }
+  .wrapper .description {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .wrapper .phone {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .wrapper .subtitle {
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 5px;
+  }
+  .wrapper .logo {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .home .descr-list li {
+    font-size: 16px;
+    padding: 0;
+  }
+  .home .title {
+    margin-top: 140px;
+  }
+  .home nav ul li a {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  .about .title {
+    letter-spacing: 6px;
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .about .advantages {
+    margin-top: 35px;
+    margin-bottom: 45px;
+  }
+  .about .advant-item {
+    margin-top: 20px;
+  }
+  .about .advant-item .image {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+  .about .advant-item .image img {
+    width: 40px;
+  }
+  .price .phone-slider {
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+  .price .phone-slider .slide .text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .price .service a {
+    letter-spacing: 2px;
+    line-height: 16px;
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .result .left .result-service {
+    margin-top: 40px;
+    line-height: 18px;
+    font-size: 18px;
+  }
+  .result .left .result-phone {
+    font-size: 18px;
+    letter-spacing: 3px;
+    line-height: 18px;
+  }
+  .result .left .result-price {
+    font-size: 200px;
+    line-height: 180px;
+  }
+  .result .left .rub {
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 30px;
+  }
+  .result .left .discount {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .result .right .title {
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 8px;
+  }
+  .result .right .subtitle {
+    margin-top: 55px;
+    font-size: 26px;
+    line-height: 26px;
+    letter-spacing: 4px;
+  }
+  .result .right form {
+    padding-top: 40px;
+    max-width: 320px;
+  }
+  .result .right form input {
+    font-size: 12px;
+  }
+  footer {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .wrapper .title {
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 6px;
+  }
+  .wrapper .title img {
+    width: 25px;
+    margin-top: -65px;
+  }
+  .wrapper .description {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .wrapper .phone {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .wrapper .subtitle {
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 3px;
+  }
+  .wrapper .logo {
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .home .descr-list li {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .home .title {
+    margin-top: 120px;
+  }
+  .about .title {
+    letter-spacing: 5px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .about .advantages {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .about .advant-item {
+    margin-top: 15px;
+  }
+  .about .advant-item .image {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1px;
+  }
+  .about .advant-item .image img {
+    width: 35px;
+  }
+  .price .phone-slider {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  .price .phone-slider .slide .text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .price .service a {
+    letter-spacing: 2px;
+    line-height: 14px;
+    font-size: 14px;
+    padding: 8px 13px;
+  }
+  .result .left .result-service {
+    margin-top: 30px;
+    line-height: 16px;
+    font-size: 16px;
+  }
+  .result .left .result-phone {
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 16px;
+  }
+  .result .left .result-price {
+    font-size: 156px;
+    line-height: 156px;
+  }
+  .result .left .rub {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 22px;
+  }
+  .result .left .discount {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .result .right .title {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 6px;
+  }
+  .result .right .subtitle {
+    margin-top: 35px;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 3px;
+  }
+  .result .right form {
+    padding-top: 30px;
+    max-width: 300px;
+  }
+  .result .right form input {
+    font-size: 10px;
+  }
+  footer {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .wrapper .title {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 3px;
+  }
+  .wrapper .title img {
+    width: 20px;
+    margin-top: -50px;
+  }
+  .wrapper .subtitle {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .wrapper .button-block {
+    margin-top: 20px;
+  }
+  .wrapper .button-block .button {
+    font-size: 12px;
+    max-width: 150px;
+  }
+  .wrapper .description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .home {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .home .descr-list li {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .home .title {
+    margin-top: 40px;
+  }
+  .home .descr-list {
+    margin-top: 10px;
+  }
+  .about {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .about .title {
+    letter-spacing: 3px;
+    font-size: 22px;
+    line-height: 22px;
+  }
+  .about .title:first-child {
+    margin-top: 10px;
+  }
+  .about .advantages {
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .about .advant-item {
+    margin-top: 10px;
+  }
+  .about .advant-item .image {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 1px;
+  }
+  .about .advant-item .image img {
+    width: 25px;
+  }
+  .price {
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .price .phone-slider {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .price .service a {
+    padding: 6px 13px;
+  }
+  .price .subtitle {
+    margin-top: 20px;
+  }
+  .result {
+    padding: 50px 40px 0 40px;
+  }
+  .result .left .result-service {
+    margin-top: 20px;
+    line-height: 14px;
+    font-size: 14px;
+  }
+  .result .left .result-phone {
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 14px;
+  }
+  .result .left .result-price {
+    font-size: 126px;
+    line-height: 126px;
+  }
+  .result .left .rub {
+    font-size: 10px;
+    line-height: 10px;
+    padding-top: 20px;
+  }
+  .result .left .discount {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .result .right .title {
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 3px;
+  }
+  .result .right .subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+  .result .right form {
+    padding-top: 20px;
+    max-width: 300px;
+  }
+  .result .right form input {
+    font-size: 10px;
+  }
+  footer {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper .title {
+    font-size: 22x;
+    line-height: 282x;
+    letter-spacing: 2px;
+  }
+  .wrapper .title img {
+    width: 15px;
+    margin-top: -40px;
+    margin-right: -20px;
+  }
+  .wrapper .logo {
+    text-align: center;
+  }
+  .wrapper .phone-number {
+    padding-top: 10px;
+    text-align: center;
+  }
+  .home {
+    padding-left: 30px;
+    padding-right: 30px;
+    background: transparent;
+  }
+  .about {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about .advant-item .image img {
+    margin-right: 8px;
+  }
+  .price {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .price .service {
+    margin-top: 20px;
+  }
+  .result {
+    padding: 40px 30px 0 30px;
+  }
+  .result .left {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  .result .left .result-phone {
+    justify-content: center;
+  }
+  .result .right {
+    text-align: center;
+  }
+  .result .right .title {
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 2px;
+  }
+  .result .right .subtitle {
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 2px;
+  }
+  .result .right form {
+    margin: 0 auto;
+  }
+}
